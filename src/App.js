@@ -38,20 +38,20 @@ function App() {
   return (
     <>
       <Router>
-        <AppNavbar activePage={activePage}/>
-        <Route 
+        <AppNavbar activePage={activePage} />
+        <Route
           exact path="/"
           render={(props) => <HomePage {...props} setActivePage={() => setActivePage("home")} />}
         />
-        <Route 
+        <Route
           path="/portfolio"
           render={(props) => <PortfolioPage {...props} setActivePage={() => setActivePage("portfolio")} />}
         />
-        <Route 
+        <Route
           path="/about"
           render={(props) => <AboutPage {...props} setActivePage={() => setActivePage("about")} />}
         />
-        <Route 
+        <Route
           path="/contact"
           render={(props) => <ContactPage {...props} setActivePage={() => setActivePage("contact")} />}
         />
@@ -66,7 +66,7 @@ function AppNavbar(props) {
   let portfolioClass = null;
   let aboutClass = null;
   let contactClass = null;
-  switch(props.activePage) {
+  switch (props.activePage) {
     case "home":
       homeClass = "active";
       break;
@@ -96,7 +96,7 @@ function AppNavbar(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-   </>
+    </>
   );
 }
 
@@ -138,19 +138,19 @@ function HomeInfo(props) {
         <h4>What Can I Provide?</h4>
         <hr className="my-4" />
         <p className="lead">As a current computer programming student I by no means know everything there is to know
-          about web/software delopment. With that being said, this field is my passion and I always welcome new and 
+          about web/software delopment. With that being said, this field is my passion and I always welcome new and
           challenging projects. I am constantly striving to improve as a programmer.</p>
         <p className="lead">Some examples of my past work can be found under the portfolio section of this site. These
-          examples are by no means my limitations, rather could be used as a template for a project if any of them are 
+          examples are by no means my limitations, rather could be used as a template for a project if any of them are
           of interest.</p>
-        <p className="lead">This website was designed and programmed by myself and is a good example of how I would 
+        <p className="lead">This website was designed and programmed by myself and is a good example of how I would
           go about creating a React Bootstrap personal website for a potential client.</p>
         <p className="lead">No matter what kind of project you are interested in having made, please send me an email
           detailing your needs. I love testing my skills and look forward to learning new ones in the process.</p>
         <h4>Why Choose Me?</h4>
         <hr className="my-4" />
         <p className="lead">As a new developer, a quality learning experience is way more valuable to me than getting
-          a quick buck. I am very flexable when it comes to pricing and will not expect any payout if you are 
+          a quick buck. I am very flexable when it comes to pricing and will not expect any payout if you are
           unsatisfied with the final product I provide. All inquiries are welcome, please reach out today!</p>
       </Jumbotron>
     </>
@@ -650,11 +650,11 @@ function AboutPage(props) {
         </Row>
       </Container>
     </>
-  );  
+  );
 }
 
 function AboutBio(props) {
-  let diff =(new Date().getTime() - new Date("July 5, 1999 00:00:00").getTime()) / 1000;
+  let diff = (new Date().getTime() - new Date("July 5, 1999 00:00:00").getTime()) / 1000;
   diff /= (60 * 60 * 24);
   diff /= 365.25;
   let age = Math.floor(diff);
@@ -698,18 +698,23 @@ function AboutSkills(props) {
         <hr className="my-4" />
         <p className="lead">HTML</p>
         <p className="lead">CSS</p>
+        <p className="lead">Sass</p>
         <p className="lead">JavaScript</p>
         <p className="lead">TypeScript</p>
         <p className="lead">React</p>
-        <p className="lead">Bootstrap</p>
         <p className="lead">jQuery</p>
+        <p className="lead">Node.js</p>
+        <p className="lead">Express.js</p>
         <p className="lead">PHP</p>
+        <p className="lead">Laravel</p>
         <p className="lead">ASP.NET</p>
         <p className="lead">C#.NET</p>
         <p className="lead">VB.NET</p>
         <p className="lead">Java</p>
         <p className="lead">T-SQL</p>
         <p className="lead">MySQL</p>
+        <p className="lead">SQLite</p>
+        <p className="lead">Git</p>
         <hr className="my-4" />
       </Jumbotron>
     </>
@@ -761,7 +766,7 @@ function ContactInfo(props) {
           <ListGroup.Item action href="https://twitter.com/jarodburchill" variant="light">
             Twitter
           </ListGroup.Item>
-          <br />         
+          <br />
           <ListGroup.Item action href="https://www.instagram.com/burchilldevelopment/" variant="light">
             Instagram
           </ListGroup.Item>
