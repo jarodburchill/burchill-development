@@ -699,6 +699,7 @@ function AboutSkills(props) {
         <p className="lead">HTML</p>
         <p className="lead">CSS</p>
         <p className="lead">Sass</p>
+        <p className="lead">Bootstrap</p>
         <p className="lead">JavaScript</p>
         <p className="lead">TypeScript</p>
         <p className="lead">React</p>
