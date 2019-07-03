@@ -1,7 +1,7 @@
 :root {
-  --primaryColor: #b20000;
-  --secondaryColor: #ffffff;
-  --tertiaryColor: #000000;
+  --primaryColor: rgb(79,116,128);
+  --secondaryColor: rgb(255, 255, 255);
+  --tertiaryColor: rgb(0, 0, 0);
 }
 html {
   background-color: var(--primaryColor);
