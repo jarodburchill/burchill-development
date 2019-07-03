@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
-import '../styles/App.css';
-import AppNavbar from './AppNavbar'
-import AppFooter from './AppFooter'
-import HomePage from './HomePage'
+import '../../styles/App.css';
+import AppNavbar from './AppNavbar';
+import AppFooter from './AppFooter';
+import HomePage from '../Home/HomePage';
+import PortfolioPage from '../Portfolio/PortfolioPage';
 
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
@@ -16,24 +17,24 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Carousel from 'react-bootstrap/Carousel';
-import lakers1 from '../img/lakers1.png';
-import lakers2 from '../img/lakers2.png';
-import lakers3 from '../img/lakers3.png';
-import plumcreek1 from '../img/plumcreek1.png'
-import budget1 from '../img/budget1.png';
-import budget2 from '../img/budget2.png';
-import budget3 from '../img/budget3.png';
-import car1 from '../img/car1.png';
-import car2 from '../img/car2.png';
-import car3 from '../img/car3.png';
-import review1 from '../img/review1.png';
-import review2 from '../img/review2.png';
-import review3 from '../img/review3.png';
-import qpuzzle1 from '../img/qpuzzle1.png';
-import qpuzzle2 from '../img/qpuzzle2.png';
-import pong1 from '../img/pong1.png';
-import pong2 from '../img/pong2.png';
-import pong3 from '../img/pong3.png';
+import lakers1 from '../../img/lakers1.png';
+import lakers2 from '../../img/lakers2.png';
+import lakers3 from '../../img/lakers3.png';
+import plumcreek1 from '../../img/plumcreek1.png'
+import budget1 from '../../img/budget1.png';
+import budget2 from '../../img/budget2.png';
+import budget3 from '../../img/budget3.png';
+import car1 from '../../img/car1.png';
+import car2 from '../../img/car2.png';
+import car3 from '../../img/car3.png';
+import review1 from '../../img/review1.png';
+import review2 from '../../img/review2.png';
+import review3 from '../../img/review3.png';
+import qpuzzle1 from '../../img/qpuzzle1.png';
+import qpuzzle2 from '../../img/qpuzzle2.png';
+import pong1 from '../../img/pong1.png';
+import pong2 from '../../img/pong2.png';
+import pong3 from '../../img/pong3.png';
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -62,58 +63,6 @@ const App = () => {
       </Router>
     </>
   );
-}
-
-function PortfolioPage(props) {
-  props.setActivePage();
-  return (
-    <>
-      <Container className="PageContainer" fluid>
-        <Row className="justify-content-center">
-          <Col xs={12} md={12}>
-            <PortfolioInfo />
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-}
-
-function PortfolioInfo(props) {
-  return (
-    <>
-      <Jumbotron>
-        <h2>Portfolio</h2>
-        <hr className="my-4" />
-        <PortfolioGroups />
-      </Jumbotron>
-    </>
-  );
-}
-
-function PortfolioGroups(props) {
-  return (
-    <>
-      <Tabs defaultActiveKey="html" className="PortfolioTabs">
-        <Tab eventKey="html" title="HTML">
-          <br />
-          <PortfolioHTML />
-        </Tab>
-        <Tab eventKey="javascript" title="JS">
-          <br />
-          <PortfolioJS />
-        </Tab>
-        <Tab eventKey="react" title="React">
-          <br />
-          <PortfolioReact />
-        </Tab>
-        <Tab eventKey="net" title=".NET">
-          <br />
-          <PortfolioNET />
-        </Tab>
-      </Tabs>
-    </>
-  )
 }
 
 function PortfolioHTML(props) {
