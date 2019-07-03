@@ -11,17 +11,17 @@ function PortfolioGroups() {
   return (
     <>
       <Tabs defaultActiveKey="html" className="PortfolioTabs">
-        <Tab eventKey="html" title="HTML">
+        <Tab eventKey="react" title="React">
           <br />
-          <PortfolioHTML />
+          <PortfolioReact />
         </Tab>
         <Tab eventKey="javascript" title="JS">
           <br />
           <PortfolioJS />
         </Tab>
-        <Tab eventKey="react" title="React">
+        <Tab eventKey="html" title="HTML">
           <br />
-          <PortfolioReact />
+          <PortfolioHTML />
         </Tab>
         <Tab eventKey="net" title=".NET">
           <br />

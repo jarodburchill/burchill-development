@@ -14,7 +14,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Carousel from 'react-bootstrap/Carousel';
 import lakers1 from '../../img/lakers1.png';
@@ -61,37 +60,6 @@ const App = () => {
         />
         <AppFooter />
       </Router>
-    </>
-  );
-}
-
-function PortfolioHTML(props) {
-  return (
-    <>
-      <Tab.Container defaultActiveKey="lakers">
-        <Row>
-          <Col sm={3} md={3}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="lakers">Lakers Website</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="plumcreek">Plum Creek Syrup</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9} md={7}>
-            <Tab.Content>
-              <Tab.Pane eventKey="lakers">
-                <PortfolioLakersWebsite />
-              </Tab.Pane>
-              <Tab.Pane eventKey="plumcreek">
-                <PortfolioPlumCreekSyrup />
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
     </>
   );
 }
@@ -160,43 +128,6 @@ function PortfolioPlumCreekSyrup(props) {
       <Button variant="outline-dark" href="https://github.com/jarodburchill/PlumCreekSyrup">
         Repository
       </Button>
-    </>
-  );
-}
-
-function PortfolioJS(props) {
-  return (
-    <>
-      <Tab.Container defaultActiveKey="budget">
-        <Row>
-          <Col sm={3} md={3}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="budget">Android Budget App</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="car">Car Insurance Web App</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="review">Mobile Review Web App</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9} md={7}>
-            <Tab.Content>
-              <Tab.Pane eventKey="budget">
-                <PortfolioAndroidBudgetApp />
-              </Tab.Pane>
-              <Tab.Pane eventKey="car">
-                <PortfolioCarInsuranceWebApp />
-              </Tab.Pane>
-              <Tab.Pane eventKey="review">
-                <PortfolioMobileReviewWebApp />
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
     </>
   );
 }
@@ -324,31 +255,6 @@ function PortfolioMobileReviewWebApp(props) {
       <Button variant="outline-dark" href="https://github.com/jarodburchill/MobileWebPrototype">
         Repository
       </Button>
-    </>
-  );
-}
-
-function PortfolioReact(props) {
-  return (
-    <>
-      <Tab.Container defaultActiveKey="burchilldev">
-        <Row>
-          <Col sm={3} md={3}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="burchilldev">Burchill Development</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9} md={7}>
-            <Tab.Content>
-              <Tab.Pane eventKey="burchilldev">
-                <PortfolioBurchillDevelopment />
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
     </>
   );
 }
