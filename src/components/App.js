@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
-import './App.css';
+import { HashRouter as Router, Route } from "react-router-dom";
+import '../styles/App.css';
+import AppNavbar from './AppNavbar'
+import AppFooter from './AppFooter'
+import HomePage from './HomePage'
+
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -33,8 +35,9 @@ import pong1 from '../img/pong1.png';
 import pong2 from '../img/pong2.png';
 import pong3 from '../img/pong3.png';
 
-function App() {
+const App = () => {
   const [activePage, setActivePage] = useState("home");
+
   return (
     <>
       <Router>
@@ -57,127 +60,6 @@ function App() {
         />
         <AppFooter />
       </Router>
-    </>
-  );
-}
-
-function AppNavbar(props) {
-  let homeClass = null;
-  let portfolioClass = null;
-  let aboutClass = null;
-  let contactClass = null;
-  switch (props.activePage) {
-    case "home":
-      homeClass = "active";
-      break;
-    case "portfolio":
-      portfolioClass = "active";
-      break;
-    case "about":
-      aboutClass = "active";
-      break;
-    case "contact":
-      contactClass = "active";
-      break;
-    default:
-      break;
-  }
-  return (
-    <>
-      <Navbar collapseOnSelect expand="lg" variant="dark" className="AppNavbar">
-        <Navbar.Brand>Burchill Development</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#/" className={homeClass}>Home</Nav.Link>
-            <Nav.Link href="#/portfolio" className={portfolioClass}>Portfolio</Nav.Link>
-            <Nav.Link href="#/about" className={aboutClass}>About Me</Nav.Link>
-            <Nav.Link href="#/contact" className={contactClass}>Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </>
-  );
-}
-
-function AppFooter(props) {
-  const currentYear = new Date().getFullYear();
-  return (
-    <>
-      <footer>
-        <p className="AppFooter">Jarod Burchill - {currentYear}</p>
-      </footer>
-    </>
-  )
-}
-
-function HomePage(props) {
-  props.setActivePage();
-  return (
-    <>
-      <Container className="PageContainer" fluid>
-        <Row className="justify-content-center">
-          <Col xs={12} md={8}>
-            <HomeInfo />
-          </Col>
-          <Col xs={12} md={4}>
-            <HomeForm />
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-}
-
-function HomeInfo(props) {
-  return (
-    <>
-      <Jumbotron>
-        <h2>Burchill Software Development</h2>
-        <hr className="my-4" />
-        <h4>What Can I Provide?</h4>
-        <hr className="my-4" />
-        <p className="lead">As a current computer programming student I by no means know everything there is to know
-          about web/software delopment. With that being said, this field is my passion and I always welcome new and
-          challenging projects. I am constantly striving to improve as a programmer.</p>
-        <p className="lead">Some examples of my past work can be found under the portfolio section of this site. These
-          examples are by no means my limitations, rather could be used as a template for a project if any of them are
-          of interest.</p>
-        <p className="lead">This website was designed and programmed by myself and is a good example of how I would
-          go about creating a React Bootstrap personal website for a potential client.</p>
-        <p className="lead">No matter what kind of project you are interested in having made, please send me an email
-          detailing your needs. I love testing my skills and look forward to learning new ones in the process.</p>
-        <h4>Why Choose Me?</h4>
-        <hr className="my-4" />
-        <p className="lead">As a new developer, a quality learning experience is way more valuable to me than getting
-          a quick buck. I am very flexable when it comes to pricing and will not expect any payout if you are
-          unsatisfied with the final product I provide. All inquiries are welcome, please reach out today!</p>
-      </Jumbotron>
-    </>
-  );
-}
-
-function HomeForm(props) {
-  return (
-    <>
-      <Jumbotron>
-        <h2>Project Request</h2>
-        <hr className="my-4" />
-        <Form action="mailto:jarod@burchilldevelopment.com" method="post" encType="text/plain">
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address:</Form.Label>
-            <Form.Control name="email" type="email" placeholder="Enter email" required />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Description of project requirements:</Form.Label>
-            <Form.Control name="description" as="textarea" rows="8" placeholder="Enter description" required />
-          </Form.Group>
-          <Button variant="outline-dark" type="submit">
-            Submit Request
-          </Button>
-        </Form>
-      </Jumbotron>
     </>
   );
 }
