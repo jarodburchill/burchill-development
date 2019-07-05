@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
+import PortfolioBurchillDevelopment from './PortfolioBurchillDevelopment';
 
 const PortfolioReact = () => {
   return (
