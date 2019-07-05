@@ -10,7 +10,7 @@ import Tab from 'react-bootstrap/Tab';
 function PortfolioGroups() {
   return (
     <>
-      <Tabs defaultActiveKey="html" className="PortfolioTabs">
+      <Tabs defaultActiveKey="react" className="PortfolioTabs">
         <Tab eventKey="react" title="React">
           <br />
           <PortfolioReact />
