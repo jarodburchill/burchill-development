@@ -3,6 +3,8 @@ import Tab from 'react-bootstrap/Tab';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
+import PortfolioPongGame from './PortfolioPongGame';
+import PortfolioQPuzzleGame from './PortfolioQPuzzleGame';
 
 const PortfolioNET = () => {
   return (

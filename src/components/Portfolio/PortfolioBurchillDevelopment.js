@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 
-function PortfolioBurchillDevelopment(props) {
+const PortfolioBurchillDevelopment = (props) => {
   return (
     <>
       <h2>Burchill Development (this site)</h2>

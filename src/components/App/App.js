@@ -6,19 +6,12 @@ import AppFooter from './AppFooter';
 import HomePage from '../Home/HomePage';
 import PortfolioPage from '../Portfolio/PortfolioPage';
 
-import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Carousel from 'react-bootstrap/Carousel';
-import qpuzzle1 from '../../img/qpuzzle1.png';
-import qpuzzle2 from '../../img/qpuzzle2.png';
-import pong1 from '../../img/pong1.png';
-import pong2 from '../../img/pong2.png';
-import pong3 from '../../img/pong3.png';
+
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -45,72 +38,6 @@ const App = () => {
         />
         <AppFooter />
       </Router>
-    </>
-  );
-}
-
-function PortfolioPongGame(props) {
-  return (
-    <>
-      <h2>Pong Game</h2>
-      <Badge variant="success">C#</Badge>
-      <Badge variant="secondary">MonoGame</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pong1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pong2}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pong3}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/PongGame">
-        Repository
-      </Button>
-    </>
-  );
-}
-
-function PortfolioQPuzzleGame(props) {
-  return (
-    <>
-      <h2>Q-Puzzle Game</h2>
-      <Badge variant="success">C#</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={qpuzzle1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={qpuzzle2}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/QPuzzleGame">
-        Repository
-      </Button>
     </>
   );
 }
