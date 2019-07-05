@@ -14,10 +14,6 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Carousel from 'react-bootstrap/Carousel';
-import lakers1 from '../../img/lakers1.png';
-import lakers2 from '../../img/lakers2.png';
-import lakers3 from '../../img/lakers3.png';
-import plumcreek1 from '../../img/plumcreek1.png'
 import qpuzzle1 from '../../img/qpuzzle1.png';
 import qpuzzle2 from '../../img/qpuzzle2.png';
 import pong1 from '../../img/pong1.png';
@@ -49,74 +45,6 @@ const App = () => {
         />
         <AppFooter />
       </Router>
-    </>
-  );
-}
-
-function PortfolioLakersWebsite(props) {
-  return (
-    <>
-      <h2>Lakers Website</h2>
-      <Badge variant="danger">HTML</Badge>
-      <Badge variant="primary">CSS</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={lakers1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={lakers2}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={lakers3}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://jarodburchill.github.io/LakersWebsite/">
-        Link
-      </Button>&nbsp;
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/LakersWebsite">
-        Repository
-      </Button>
-    </>
-  );
-}
-
-function PortfolioPlumCreekSyrup(props) {
-  return (
-    <>
-      <h2>Plum Creek Syrup</h2>
-      <Badge variant="danger">HTML</Badge>
-      <Badge variant="primary">CSS</Badge>
-      <Badge variant="info">Bootstrap</Badge>
-      <Badge variant="secondary">Mobile</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={plumcreek1}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://jarodburchill.github.io/PlumCreekSyrup/">
-        Link
-      </Button>&nbsp;
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/PlumCreekSyrup">
-        Repository
-      </Button>
     </>
   );
 }
