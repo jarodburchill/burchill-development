@@ -42,7 +42,7 @@ const App = () => {
   );
 }
 
-function AboutPage(props) {
+const AboutPage = (props) => {
   props.setActivePage();
   return (
     <>
@@ -60,7 +60,7 @@ function AboutPage(props) {
   );
 }
 
-function AboutBio(props) {
+const AboutBio = () => {
   let diff = (new Date().getTime() - new Date("July 5, 1999 00:00:00").getTime()) / 1000;
   diff /= (60 * 60 * 24);
   diff /= 365.25;
@@ -97,7 +97,7 @@ function AboutBio(props) {
   );
 }
 
-function AboutSkills(props) {
+const AboutSkills = () => {
   return (
     <>
       <Jumbotron>
@@ -129,7 +129,7 @@ function AboutSkills(props) {
   );
 }
 
-function ContactPage(props) {
+const ContactPage = (props) => {
   props.setActivePage();
   return (
     <>
@@ -144,7 +144,7 @@ function ContactPage(props) {
   );
 }
 
-function ContactInfo(props) {
+const ContactInfo = () => {
   return (
     <>
       <Jumbotron>

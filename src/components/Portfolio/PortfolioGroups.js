@@ -1,8 +1,8 @@
 import React from 'react';
-import PortfolioReact from '';
-import PortfolioJS from '';
-import PortfolioHTML from '';
-import PortfolioNET from '';
+import PortfolioReact from './PortfolioReact';
+import PortfolioJS from './PortfolioJS';
+import PortfolioHTML from './PortfolioHTML';
+import PortfolioNET from './PortfolioNET';
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
