@@ -9,26 +9,15 @@ import PortfolioPage from '../Portfolio/PortfolioPage';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Tab from 'react-bootstrap/Tab';
 import Carousel from 'react-bootstrap/Carousel';
 import lakers1 from '../../img/lakers1.png';
 import lakers2 from '../../img/lakers2.png';
 import lakers3 from '../../img/lakers3.png';
 import plumcreek1 from '../../img/plumcreek1.png'
-import budget1 from '../../img/budget1.png';
-import budget2 from '../../img/budget2.png';
-import budget3 from '../../img/budget3.png';
-import car1 from '../../img/car1.png';
-import car2 from '../../img/car2.png';
-import car3 from '../../img/car3.png';
-import review1 from '../../img/review1.png';
-import review2 from '../../img/review2.png';
-import review3 from '../../img/review3.png';
 import qpuzzle1 from '../../img/qpuzzle1.png';
 import qpuzzle2 from '../../img/qpuzzle2.png';
 import pong1 from '../../img/pong1.png';
@@ -132,133 +121,6 @@ function PortfolioPlumCreekSyrup(props) {
   );
 }
 
-function PortfolioAndroidBudgetApp(props) {
-  return (
-    <>
-      <h2>Android Budget App</h2>
-      <Badge variant="danger">HTML</Badge>
-      <Badge variant="primary">CSS</Badge>
-      <Badge variant="warning">JS</Badge>
-      <Badge variant="info">jQuery</Badge>
-      <Badge variant="success">Android</Badge>
-      <Badge variant="secondary">Mobile</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={budget1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={budget2}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={budget3}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/AndroidBudgetApp">
-        Repository
-      </Button>
-    </>
-  );
-}
-
-function PortfolioCarInsuranceWebApp(props) {
-  return (
-    <>
-      <h2>Car Insurance Web App</h2>
-      <Badge variant="danger">HTML</Badge>
-      <Badge variant="primary">CSS</Badge>
-      <Badge variant="warning">JS</Badge>
-      <Badge variant="info">jQuery</Badge>
-      <Badge variant="secondary">Mobile</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={car1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={car2}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={car3}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://jarodburchill.github.io/CarInsuranceWebApp/">
-        Link
-      </Button>&nbsp;
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/CarInsuranceWebApp">
-        Repository
-      </Button>
-    </>
-  );
-}
-
-function PortfolioMobileReviewWebApp(props) {
-  return (
-    <>
-      <h2>Mobile Review Web App</h2>
-      <Badge variant="danger">HTML</Badge>
-      <Badge variant="primary">CSS</Badge>
-      <Badge variant="warning">JS</Badge>
-      <Badge variant="info">jQuery</Badge>
-      <Badge variant="secondary">Mobile</Badge>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={review1}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={review2}
-            alt=""
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={review3}
-            alt=""
-          />
-        </Carousel.Item>
-      </Carousel>
-      <br />
-      <Button variant="outline-dark" href="https://jarodburchill.github.io/MobileWebPrototype/">
-        Link
-      </Button>&nbsp;
-      <Button variant="outline-dark" href="https://github.com/jarodburchill/MobileWebPrototype">
-        Repository
-      </Button>
-    </>
-  );
-}
-
 function PortfolioBurchillDevelopment(props) {
   return (
     <>
@@ -271,37 +133,6 @@ function PortfolioBurchillDevelopment(props) {
       <Button variant="outline-dark" href="https://github.com/jarodburchill/BurchillDevelopment">
         Repository
       </Button>
-    </>
-  );
-}
-
-function PortfolioNET(props) {
-  return (
-    <>
-      <Tab.Container defaultActiveKey="pong">
-        <Row>
-          <Col sm={3} md={3}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="pong">Pong Game</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="qpuzzle">Q-Puzzle Game</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9} md={7}>
-            <Tab.Content>
-              <Tab.Pane eventKey="pong">
-                <PortfolioPongGame />
-              </Tab.Pane>
-              <Tab.Pane eventKey="qpuzzle">
-                <PortfolioQPuzzleGame />
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
     </>
   );
 }

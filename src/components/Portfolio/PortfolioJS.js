@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
+import PortfolioAndroidBudgetApp from './PortfolioAndroidBudgetApp';
 
 const PortfolioJS = () => {
   return (
