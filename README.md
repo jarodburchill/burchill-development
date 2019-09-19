@@ -1,5 +1,5 @@
 # Burchill Development
-GitHub Pages: https://burchilldevelopment.github.io/BurchillDevelopment
+GitHub Pages: https://jarodburchill.github.io/BurchillDevelopment
 ## Purpose
 I designed this web application to be a personal developer website for myself and to display my new React skills. 
 ## React Application
