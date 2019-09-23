@@ -1,23 +1,27 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
+import Navbar from "./Navbar";
 
 const theme = {
-  primary: "rgb(35, 154, 201)"
+  primary: "rgba(255, 255, 255, 0.9)"
 };
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  margin-top: 10vh;
+  width: 100%;
+  min-height: 50vh;
   background: ${props => props.theme.primary};
 `;
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <div>
+        <Navbar />
         <GlobalStyle />
-      </Container>
+        <Container></Container>
+      </div>
     </ThemeProvider>
   );
 };

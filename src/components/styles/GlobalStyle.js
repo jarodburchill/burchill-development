@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import background from "../assets/background.jpg";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url(${background});
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;
   }
 `;
 
