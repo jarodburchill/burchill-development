@@ -2,11 +2,25 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  position: fixed;
-  top: 0;
   width: 100%;
   height: 10vh;
+  top: 0;
+  position: fixed;
   background: black;
+`;
+
+const Content = styled.span`
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Title = styled.h1`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 5%;
+  z-index: 1;
 `;
 
 const Links = styled.div`
@@ -16,7 +30,6 @@ const Links = styled.div`
   list-style: none;
   width: 50%;
   height: 100%;
-  margin-left: auto;
   li a {
     color: white;
     text-decoration: none;
@@ -28,6 +41,7 @@ const Links = styled.div`
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    justify-content: space-evenly;
     transition: all 1s ease-out;
     clip-path: ${props =>
       props.open ? "circle(200% at 90% -10%)" : "circle(100px at 90% -10%)"};
@@ -36,19 +50,11 @@ const Links = styled.div`
     pointer-events: ${props => (props.open ? "all" : "none")};
 
     li {
+      transition: all 0.25s ease-out;
       opacity: ${props => (props.open ? "1" : "0")};
       a {
         font-size: 25px;
       }
-    }
-    li:nth-child(1) {
-      transition: all 0.25s ease 0.2s;
-    }
-    li:nth-child(2) {
-      transition: all 0.25s ease 0.4s;
-    }
-    li:nth-child(3) {
-      transition: all 0.25s ease 0.6s;
     }
   }
 `;
@@ -68,15 +74,15 @@ const Line = styled.div`
   @media screen and (max-width: 768px) {
     width: 30px;
     height: 3px;
-    background: white;
     margin: 5px;
+    background: white;
   }
 `;
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const hamburgerClick = () => {
+  const handleClick = () => {
     if (open === false) {
       setOpen(true);
     } else {
@@ -84,25 +90,32 @@ const Navbar = () => {
     }
   };
 
+  window.addEventListener("resize", () => {
+    setOpen(false);
+  });
+
   return (
     <>
       <Nav>
-        <Hamburger onClick={() => hamburgerClick()}>
+        <Hamburger onClick={() => handleClick()}>
           <Line />
           <Line />
           <Line />
         </Hamburger>
-        <Links open={open}>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-        </Links>
+        <Content>
+          <Title>Burchill Development</Title>
+          <Links open={open}>
+            <li onClick={() => handleClick()}>
+              <a href="#about">About</a>
+            </li>
+            <li onClick={() => handleClick()}>
+              <a href="#contact">Contact</a>
+            </li>
+            <li onClick={() => handleClick()}>
+              <a href="#projects">Projects</a>
+            </li>
+          </Links>
+        </Content>
       </Nav>
     </>
   );
