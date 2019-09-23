@@ -90,8 +90,10 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener("resize", () => {
-    setOpen(false);
+  window.addEventListener("resize", e => {
+    if (e.target.outerWidth > 768) {
+      setOpen(false);
+    }
   });
 
   return (
