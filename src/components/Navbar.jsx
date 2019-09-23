@@ -44,9 +44,9 @@ const Links = styled.div`
     justify-content: space-evenly;
     transition: all 1s ease-out;
     clip-path: ${props =>
-      props.open ? "circle(200% at 90% -10%)" : "circle(100px at 90% -10%)"};
+      props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
     -webkit-clip-path: ${props =>
-      props.open ? "circle(200% at 90% -10%)" : "circle(100px at 90% -10%)"};
+      props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
     pointer-events: ${props => (props.open ? "all" : "none")};
 
     li {
