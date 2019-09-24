@@ -8,9 +8,10 @@ const theme = {
 };
 
 const Container = styled.div`
-  margin-top: 10vh;
+  margin: 10vh 1% 0 1%;
   padding: 10%;
-  width: 100%;
+  border-radius: 10px;
+  width: 98%;
   min-height: 50vh;
   position: relative;
   background: inherit;
