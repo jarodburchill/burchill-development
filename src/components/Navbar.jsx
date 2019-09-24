@@ -35,6 +35,9 @@ const Links = styled.div`
     text-decoration: none;
     font-size: 16px;
   }
+`;
+
+const HamburgerLinks = styled(Links)`
   @media screen and (max-width: 768px) {
     position: fixed;
     background: black;
@@ -82,53 +85,73 @@ const Line = styled.div`
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
-  };
-
-  window.addEventListener("resize", e => {
-    if (e.target.outerWidth > 768) {
-      setOpen(false);
-    }
-  });
-
-  if (open) {
-    const x = window.scrollX;
-    const y = window.scrollY;
-    window.onscroll = () => {
-      window.scrollTo(x, y);
+  if (window.navigator.userAgent.indexOf("Edge") < 0) {
+    const handleClick = () => {
+      if (open) {
+        setOpen(false);
+      } else {
+        setOpen(true);
+      }
     };
-  } else {
-    window.onscroll = () => {};
-  }
 
-  return (
-    <Nav>
-      <Hamburger onClick={() => handleClick()}>
-        <Line />
-        <Line />
-        <Line />
-      </Hamburger>
-      <Content>
-        <Title>Burchill Development</Title>
-        <Links open={open}>
-          <li onClick={() => handleClick()}>
-            <a href="#about">About</a>
-          </li>
-          <li onClick={() => handleClick()}>
-            <a href="#contact">Contact</a>
-          </li>
-          <li onClick={() => handleClick()}>
-            <a href="#projects">Projects</a>
-          </li>
-        </Links>
-      </Content>
-    </Nav>
-  );
+    window.addEventListener("resize", e => {
+      if (e.target.outerWidth > 768) {
+        setOpen(false);
+      }
+    });
+
+    if (open) {
+      const x = window.scrollX;
+      const y = window.scrollY;
+      window.onscroll = () => {
+        window.scrollTo(x, y);
+      };
+    } else {
+      window.onscroll = () => {};
+    }
+    return (
+      <Nav>
+        <Hamburger onClick={() => handleClick()}>
+          <Line />
+          <Line />
+          <Line />
+        </Hamburger>
+        <Content>
+          <Title>Burchill Development</Title>
+          <HamburgerLinks open={open}>
+            <li onClick={() => handleClick()}>
+              <a href="#about">About</a>
+            </li>
+            <li onClick={() => handleClick()}>
+              <a href="#contact">Contact</a>
+            </li>
+            <li onClick={() => handleClick()}>
+              <a href="#projects">Projects</a>
+            </li>
+          </HamburgerLinks>
+        </Content>
+      </Nav>
+    );
+  } else {
+    return (
+      <Nav>
+        <Content>
+          <Title>Burchill Development</Title>
+          <Links>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+          </Links>
+        </Content>
+      </Nav>
+    );
+  }
 };
 
 export default Navbar;

@@ -18,7 +18,7 @@ const Container = styled.div`
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <>
         <Navbar />
         <GlobalStyle />
         <Container>
@@ -69,7 +69,7 @@ const App = () => {
           impedit magni, incidunt laudantium nesciunt, aliquam quisquam. Eos
           harum aliquid, qui facilis assumenda error?
         </Container>
-      </div>
+      </>
     </ThemeProvider>
   );
 };
