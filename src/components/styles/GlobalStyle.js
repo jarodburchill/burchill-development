@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: unset;
       background-attachment: unset;
       background-size: unset;
-      background: rgb(0, 0, 50);
+      background: rgb(0, 0, 0);
     }
   }
 `;
