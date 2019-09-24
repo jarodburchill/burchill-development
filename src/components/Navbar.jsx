@@ -109,29 +109,27 @@ const Navbar = () => {
   }
 
   return (
-    <>
-      <Nav>
-        <Hamburger onClick={() => handleClick()}>
-          <Line />
-          <Line />
-          <Line />
-        </Hamburger>
-        <Content>
-          <Title>Burchill Development</Title>
-          <Links open={open}>
-            <li onClick={() => handleClick()}>
-              <a href="#about">About</a>
-            </li>
-            <li onClick={() => handleClick()}>
-              <a href="#contact">Contact</a>
-            </li>
-            <li onClick={() => handleClick()}>
-              <a href="#projects">Projects</a>
-            </li>
-          </Links>
-        </Content>
-      </Nav>
-    </>
+    <Nav>
+      <Hamburger onClick={() => handleClick()}>
+        <Line />
+        <Line />
+        <Line />
+      </Hamburger>
+      <Content>
+        <Title>Burchill Development</Title>
+        <Links open={open}>
+          <li onClick={() => handleClick()}>
+            <a href="#about">About</a>
+          </li>
+          <li onClick={() => handleClick()}>
+            <a href="#contact">Contact</a>
+          </li>
+          <li onClick={() => handleClick()}>
+            <a href="#projects">Projects</a>
+          </li>
+        </Links>
+      </Content>
+    </Nav>
   );
 };
 

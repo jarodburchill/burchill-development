@@ -16,8 +16,13 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-image: url(${background});
     background-attachment: fixed;
-    background-position: 50%;
     background-size: cover;
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-image: unset;
+      background-attachment: unset;
+      background-size: unset;
+      background: rgb(0, 0, 50);
+    }
   }
 `;
 
