@@ -83,10 +83,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-    if (open === false) {
-      setOpen(true);
-    } else {
+    if (open) {
       setOpen(false);
+    } else {
+      setOpen(true);
     }
   };
 
@@ -95,6 +95,18 @@ const Navbar = () => {
       setOpen(false);
     }
   });
+
+  if (open) {
+    const x = window.scrollX;
+    const y = window.scrollY;
+    window.onscroll = () => {
+      window.scrollTo(x, y);
+    };
+  } else {
+    window.onscroll = () => {
+      window.scrollTo();
+    };
+  }
 
   return (
     <>
