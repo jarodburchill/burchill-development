@@ -9,10 +9,28 @@ const theme = {
 
 const Container = styled.div`
   margin-top: 10vh;
+  padding: 10%;
   width: 100%;
   min-height: 50vh;
-  background: ${props => props.theme.primary};
-  padding: 10%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 2000px 2000px 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
+    margin: -20px;
+    z-index: -1;
+  }
 `;
 
 const App = () => {

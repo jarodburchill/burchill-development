@@ -7,6 +7,7 @@ const Nav = styled.nav`
   top: 0;
   position: fixed;
   background: black;
+  z-index: 2;
 `;
 
 const Content = styled.span`
@@ -20,7 +21,7 @@ const Title = styled.h1`
   align-items: center;
   color: white;
   margin-left: 5%;
-  z-index: 1;
+  z-index: 3;
 `;
 
 const Links = styled.div`
@@ -69,7 +70,7 @@ const Hamburger = styled.div`
     right: 5%;
     top: 50%;
     transform: translate(-5%, -50%);
-    z-index: 1;
+    z-index: 3;
   }
 `;
 

@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
       background: rgb(0, 0, 0);
     }
   }
+
+  #root {
+    /* padding-top: 10vh; */
+    background: inherit;
+  }
 `;
 
 export default GlobalStyle;
