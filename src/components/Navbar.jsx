@@ -42,7 +42,7 @@ const Links = styled.div`
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: all 1s ease-out;
+    transition: all 0.75s ease-out;
     clip-path: ${props =>
       props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
     -webkit-clip-path: ${props =>
@@ -103,9 +103,7 @@ const Navbar = () => {
       window.scrollTo(x, y);
     };
   } else {
-    window.onscroll = () => {
-      window.scrollTo();
-    };
+    window.onscroll = () => {};
   }
 
   return (
