@@ -26,7 +26,7 @@ const Container = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.75);
     filter: blur(10px);
     margin: -20px;
     z-index: -1;
