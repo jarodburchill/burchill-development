@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import background from "../assets/background.jpg";
+import background from "../assets/background1.jpg";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -15,10 +15,14 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: url(${background});
+    background-position: 50%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     @supports (-webkit-overflow-scrolling: touch) {
       background-image: unset;
+      background-position: unset;
+      background-repeat: unset;
       background-attachment: unset;
       background-size: unset;
       background: rgb(0, 0, 50);
