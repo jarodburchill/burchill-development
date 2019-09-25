@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+console.log(window.navigator.userAgent);
+
 const Nav = styled.nav`
   width: 100%;
   height: 10vh;
@@ -88,7 +90,8 @@ const Navbar = () => {
 
   if (
     window.navigator.userAgent.indexOf("Edge") < 0 &&
-    window.navigator.userAgent.indexOf("MSIE") < 0
+    window.navigator.userAgent.indexOf("MSIE") < 0 &&
+    window.navigator.userAgent.indexOf("Trident") < 0
   ) {
     const handleClick = () => {
       if (open) {
