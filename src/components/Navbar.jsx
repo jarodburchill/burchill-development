@@ -52,7 +52,6 @@ const HamburgerLinks = styled(Links)`
     -webkit-clip-path: ${props =>
       props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
     pointer-events: ${props => (props.open ? "all" : "none")};
-
     li {
       transition: all 0.25s ease-out;
       opacity: ${props => (props.open ? "1" : "0")};
@@ -83,7 +82,7 @@ const Line = styled.div`
   }
 `;
 
-const Navbar = ({ title, links, primary, secondary }) => {
+const Navbar = ({ children, title, primary, secondary }) => {
   const [open, setOpen] = useState(false);
 
   if (
@@ -124,10 +123,10 @@ const Navbar = ({ title, links, primary, secondary }) => {
         <Content>
           <Title color={secondary}>{title}</Title>
           <HamburgerLinks color={secondary} open={open}>
-            {links.map((link, index) => {
+            {children.map((link, index) => {
               return (
                 <li key={index} onClick={() => handleClick()}>
-                  <a href={link.href}>{link.name}</a>
+                  {link}
                 </li>
               );
             })}
@@ -141,12 +140,8 @@ const Navbar = ({ title, links, primary, secondary }) => {
         <Content>
           <Title color={secondary}>{title}</Title>
           <Links color={secondary}>
-            {links.map((link, index) => {
-              return (
-                <li key={index}>
-                  <a href={link.href}>{link.name}</a>
-                </li>
-              );
+            {children.map((link, index) => {
+              return <li key={index}>{link}</li>;
             })}
           </Links>
         </Content>

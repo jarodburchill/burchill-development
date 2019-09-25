@@ -39,15 +39,14 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <Navbar
-          title={"Burchill Development"}
-          links={[
-            { name: "About", href: "#" },
-            { name: "Contact", href: "#" },
-            { name: "Projects", href: "#" }
-          ]}
+          title="Burchill Development"
           primary={theme.primary}
           secondary={theme.secondary}
-        />
+        >
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#projects">Projects</a>
+        </Navbar>
         <GlobalStyle />
         <Container>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
