@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   top: 0;
   position: fixed;
@@ -43,7 +43,7 @@ const HamburgerLinks = styled(Links)`
     position: fixed;
     background: black;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
     justify-content: space-evenly;
     transition: all 0.75s ease-out;
@@ -82,7 +82,7 @@ const Line = styled.div`
   }
 `;
 
-const Navbar = ({ children, title, primary, secondary }) => {
+const Navbar = ({ children, title, bg, fg }) => {
   const [open, setOpen] = useState(false);
   if (
     window.navigator.userAgent.indexOf("Edge") < 0 &&
@@ -111,15 +111,15 @@ const Navbar = ({ children, title, primary, secondary }) => {
       window.onscroll = () => {};
     }
     return (
-      <Nav color={primary}>
+      <Nav color={bg}>
         <Hamburger onClick={() => handleClick()}>
-          <Line color={secondary} />
-          <Line color={secondary} />
-          <Line color={secondary} />
+          <Line color={fg} />
+          <Line color={fg} />
+          <Line color={fg} />
         </Hamburger>
         <Content>
-          <Title color={secondary}>{title}</Title>
-          <HamburgerLinks color={secondary} open={open}>
+          <Title color={fg}>{title}</Title>
+          <HamburgerLinks color={fg} open={open}>
             {children.map((link, index) => {
               return (
                 <li key={index} onClick={() => handleClick()}>
@@ -133,10 +133,10 @@ const Navbar = ({ children, title, primary, secondary }) => {
     );
   } else {
     return (
-      <Nav color={primary}>
+      <Nav color={bg}>
         <Content>
-          <Title color={secondary}>{title}</Title>
-          <Links color={secondary}>
+          <Title color={fg}>{title}</Title>
+          <Links color={fg}>
             {children.map((link, index) => {
               return <li key={index}>{link}</li>;
             })}

@@ -40,8 +40,8 @@ const App = () => {
       <>
         <Navbar
           title="Burchill Development"
-          primary={theme.primary}
-          secondary={theme.secondary}
+          bg={theme.primary}
+          fg={theme.secondary}
         >
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
