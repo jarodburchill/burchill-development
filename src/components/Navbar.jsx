@@ -6,7 +6,7 @@ const Nav = styled.nav`
   height: 10vh;
   top: 0;
   position: fixed;
-  background: ${props => props.color};
+  background: ${props => props.bg};
   z-index: 2;
 `;
 
@@ -19,7 +19,7 @@ const Content = styled.div`
 const Title = styled.h1`
   display: flex;
   align-items: center;
-  color: ${props => props.color};
+  color: ${props => props.fg};
   margin-left: 5%;
   z-index: 3;
 `;
@@ -32,7 +32,7 @@ const Links = styled.ul`
   width: 50%;
   height: 100%;
   li a {
-    color: ${props => props.color};
+    color: ${props => props.fg};
     text-decoration: none;
     font-size: 16px;
   }
@@ -41,7 +41,7 @@ const Links = styled.ul`
 const HamburgerLinks = styled(Links)`
   @media screen and (max-width: 768px) {
     position: fixed;
-    background: ${props => props.bgcolor};
+    background: ${props => props.bg};
     height: 100vh;
     width: 100vw;
     flex-direction: column;
@@ -78,7 +78,7 @@ const Line = styled.div`
     width: 30px;
     height: 3px;
     margin: 5px;
-    background: ${props => props.color};
+    background: ${props => props.fg};
   }
 `;
 
@@ -111,15 +111,15 @@ const Navbar = ({ children, title, bg, fg }) => {
       window.onscroll = () => {};
     }
     return (
-      <Nav color={bg}>
+      <Nav bg={bg}>
         <Hamburger onClick={() => handleClick()}>
-          <Line color={fg} />
-          <Line color={fg} />
-          <Line color={fg} />
+          <Line fg={fg} />
+          <Line fg={fg} />
+          <Line fg={fg} />
         </Hamburger>
         <Content>
-          <Title color={fg}>{title}</Title>
-          <HamburgerLinks color={fg} bgcolor={bg} open={open}>
+          <Title fg={fg}>{title}</Title>
+          <HamburgerLinks fg={fg} bg={bg} open={open}>
             {children.map((link, index) => {
               return (
                 <li key={index} onClick={() => handleClick()}>
@@ -133,10 +133,10 @@ const Navbar = ({ children, title, bg, fg }) => {
     );
   } else {
     return (
-      <Nav color={bg}>
+      <Nav bg={bg}>
         <Content>
-          <Title color={fg}>{title}</Title>
-          <Links color={fg}>
+          <Title fg={fg}>{title}</Title>
+          <Links fg={fg}>
             {children.map((link, index) => {
               return <li key={index}>{link}</li>;
             })}
