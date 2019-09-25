@@ -24,7 +24,7 @@ const Title = styled.h1`
   z-index: 3;
 `;
 
-const Links = styled.div`
+const Links = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;
