@@ -22,30 +22,39 @@ const Title = styled.h1`
   color: ${props => props.fg};
   margin-left: 5%;
   z-index: 3;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 `;
 
 const Links = styled.ul`
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
-  width: 50%;
+  width: 45%;
   height: 100%;
+  margin: 0 5% 0 0;
+  li {
+    margin: 0 2.5%;
+  }
   li a {
     color: ${props => props.fg};
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
   }
 `;
 
 const HamburgerLinks = styled(Links)`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
     background: ${props => props.bg};
     height: 100vh;
     width: 100vw;
-    flex-direction: column;
-    justify-content: space-evenly;
+    margin: 5% 0 0 0;
     transition: all 0.75s ease-out;
     clip-path: ${props =>
       props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
@@ -63,7 +72,7 @@ const HamburgerLinks = styled(Links)`
 `;
 
 const Hamburger = styled.div`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     position: absolute;
     cursor: pointer;
     right: 5%;
@@ -74,10 +83,10 @@ const Hamburger = styled.div`
 `;
 
 const Line = styled.div`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     width: 30px;
     height: 3px;
-    margin: 5px;
+    margin: 5px 0;
     background: ${props => props.fg};
   }
 `;
@@ -97,7 +106,7 @@ const Navbar = ({ children, title, bg, fg }) => {
       }
     };
     window.addEventListener("resize", e => {
-      if (e.target.outerWidth > 768) {
+      if (e.target.outerWidth > 1000) {
         setOpen(false);
       }
     });
