@@ -41,7 +41,7 @@ const Links = styled.ul`
 const HamburgerLinks = styled(Links)`
   @media screen and (max-width: 768px) {
     position: fixed;
-    background: black;
+    background: ${props => props.bgcolor};
     height: 100vh;
     width: 100vw;
     flex-direction: column;
@@ -119,7 +119,7 @@ const Navbar = ({ children, title, bg, fg }) => {
         </Hamburger>
         <Content>
           <Title color={fg}>{title}</Title>
-          <HamburgerLinks color={fg} open={open}>
+          <HamburgerLinks color={fg} bgcolor={bg} open={open}>
             {children.map((link, index) => {
               return (
                 <li key={index} onClick={() => handleClick()}>
