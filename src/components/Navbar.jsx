@@ -84,7 +84,6 @@ const Line = styled.div`
 
 const Navbar = ({ children, title, primary, secondary }) => {
   const [open, setOpen] = useState(false);
-
   if (
     window.navigator.userAgent.indexOf("Edge") < 0 &&
     window.navigator.userAgent.indexOf("MSIE") < 0 &&
@@ -97,13 +96,11 @@ const Navbar = ({ children, title, primary, secondary }) => {
         setOpen(true);
       }
     };
-
     window.addEventListener("resize", e => {
       if (e.target.outerWidth > 768) {
         setOpen(false);
       }
     });
-
     if (open) {
       const x = window.scrollX;
       const y = window.scrollY;
