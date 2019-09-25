@@ -86,7 +86,10 @@ const Line = styled.div`
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  if (window.navigator.userAgent.indexOf("Edge") < 0) {
+  if (
+    window.navigator.userAgent.indexOf("Edge") < 0 &&
+    window.navigator.userAgent.indexOf("MSIE") < 0
+  ) {
     const handleClick = () => {
       if (open) {
         setOpen(false);
