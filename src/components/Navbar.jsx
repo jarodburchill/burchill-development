@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-console.log(window.navigator.userAgent);
-
 const Nav = styled.nav`
   width: 100%;
   height: 10vh;
   top: 0;
   position: fixed;
-  background: black;
+  background: ${props => props.color};
   z-index: 2;
 `;
 
-const Content = styled.span`
+const Content = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,7 +19,7 @@ const Content = styled.span`
 const Title = styled.h1`
   display: flex;
   align-items: center;
-  color: white;
+  color: ${props => props.color};
   margin-left: 5%;
   z-index: 3;
 `;
@@ -34,7 +32,7 @@ const Links = styled.div`
   width: 50%;
   height: 100%;
   li a {
-    color: white;
+    color: ${props => props.color};
     text-decoration: none;
     font-size: 16px;
   }
@@ -81,11 +79,11 @@ const Line = styled.div`
     width: 30px;
     height: 3px;
     margin: 5px;
-    background: white;
+    background: ${props => props.color};
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ primary, secondary }) => {
   const [open, setOpen] = useState(false);
 
   if (
@@ -117,15 +115,15 @@ const Navbar = () => {
       window.onscroll = () => {};
     }
     return (
-      <Nav>
+      <Nav color={primary}>
         <Hamburger onClick={() => handleClick()}>
-          <Line />
-          <Line />
-          <Line />
+          <Line color={secondary} />
+          <Line color={secondary} />
+          <Line color={secondary} />
         </Hamburger>
         <Content>
-          <Title>Burchill Development</Title>
-          <HamburgerLinks open={open}>
+          <Title color={secondary}>Burchill Development</Title>
+          <HamburgerLinks color={secondary} open={open}>
             <li onClick={() => handleClick()}>
               <a href="#about">About</a>
             </li>
@@ -141,10 +139,10 @@ const Navbar = () => {
     );
   } else {
     return (
-      <Nav>
+      <Nav color={primary}>
         <Content>
-          <Title>Burchill Development</Title>
-          <Links>
+          <Title color={secondary}>Burchill Development</Title>
+          <Links color={secondary}>
             <li>
               <a href="#about">About</a>
             </li>

@@ -4,7 +4,8 @@ import GlobalStyle from "./styles/GlobalStyle";
 import Navbar from "./Navbar";
 
 const theme = {
-  primary: "rgba(255, 255, 255, 0.9)"
+  primary: "rgb(0, 0, 0)",
+  secondary: "rgb(255, 255, 255)"
 };
 
 const Container = styled.div`
@@ -37,7 +38,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Navbar />
+        <Navbar primary={theme.primary} secondary={theme.secondary} />
         <GlobalStyle />
         <Container>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
