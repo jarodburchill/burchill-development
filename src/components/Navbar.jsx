@@ -83,7 +83,7 @@ const Line = styled.div`
   }
 `;
 
-const Navbar = ({ primary, secondary }) => {
+const Navbar = ({ title, links, primary, secondary }) => {
   const [open, setOpen] = useState(false);
 
   if (
@@ -122,17 +122,15 @@ const Navbar = ({ primary, secondary }) => {
           <Line color={secondary} />
         </Hamburger>
         <Content>
-          <Title color={secondary}>Burchill Development</Title>
+          <Title color={secondary}>{title}</Title>
           <HamburgerLinks color={secondary} open={open}>
-            <li onClick={() => handleClick()}>
-              <a href="#about">About</a>
-            </li>
-            <li onClick={() => handleClick()}>
-              <a href="#contact">Contact</a>
-            </li>
-            <li onClick={() => handleClick()}>
-              <a href="#projects">Projects</a>
-            </li>
+            {links.map((link, index) => {
+              return (
+                <li key={index} onClick={() => handleClick()}>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              );
+            })}
           </HamburgerLinks>
         </Content>
       </Nav>
@@ -141,17 +139,15 @@ const Navbar = ({ primary, secondary }) => {
     return (
       <Nav color={primary}>
         <Content>
-          <Title color={secondary}>Burchill Development</Title>
+          <Title color={secondary}>{title}</Title>
           <Links color={secondary}>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
+            {links.map((link, index) => {
+              return (
+                <li key={index}>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              );
+            })}
           </Links>
         </Content>
       </Nav>

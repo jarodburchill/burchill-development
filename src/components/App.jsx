@@ -38,7 +38,16 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Navbar primary={theme.primary} secondary={theme.secondary} />
+        <Navbar
+          title={"Burchill Development"}
+          links={[
+            { name: "About", href: "#" },
+            { name: "Contact", href: "#" },
+            { name: "Projects", href: "#" }
+          ]}
+          primary={theme.primary}
+          secondary={theme.secondary}
+        />
         <GlobalStyle />
         <Container>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
