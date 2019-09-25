@@ -43,9 +43,9 @@ const App = () => {
           bg={theme.primary}
           fg={theme.secondary}
         >
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#home">Home</a>
           <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </Navbar>
