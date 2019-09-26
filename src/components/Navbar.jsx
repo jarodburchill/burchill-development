@@ -18,7 +18,7 @@ const Content = styled.div`
   justify-content: space-between;
 `;
 
-const Title = styled.h1`
+const Brand = styled.h1`
   display: flex;
   align-items: center;
   color: ${props => props.fg};
@@ -141,9 +141,9 @@ const Navbar = ({ children, bg, fg }) => {
             })
             .map((child, index) => {
               return (
-                <Title key={index} fg={fg} onClick={() => handleClick()}>
+                <Brand key={index} fg={fg} onClick={() => handleClick()}>
                   {child}
-                </Title>
+                </Brand>
               );
             })}
           <HamburgerLinks fg={fg} bg={bg} open={open}>
@@ -172,9 +172,9 @@ const Navbar = ({ children, bg, fg }) => {
             })
             .map((child, index) => {
               return (
-                <Title key={index} fg={fg}>
+                <Brand key={index} fg={fg}>
                   {child}
-                </Title>
+                </Brand>
               );
             })}
           <Links fg={fg}>
