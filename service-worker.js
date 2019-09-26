@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/burchill-development/precache-manifest.e1516e253296058c13eb8e672c9ebb81.js"
+  "/burchill-development/precache-manifest.98ee5259eb3024a4678e1f998a985d06.js"
 );
 
 self.addEventListener('message', (event) => {
