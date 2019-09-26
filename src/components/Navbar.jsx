@@ -22,7 +22,7 @@ const Brand = styled.h1`
   display: flex;
   align-items: center;
   color: ${props => props.fg};
-  margin-left: 5%;
+  margin: 0 0 0 5%;
   z-index: 3;
   a {
     color: ${props => props.fg};
@@ -71,7 +71,7 @@ const HamburgerLinks = styled(Links)`
       transition: all 0.25s ease-out;
       opacity: ${props => (props.open ? "1" : "0")};
       a {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
   }
