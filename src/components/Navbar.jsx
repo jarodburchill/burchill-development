@@ -9,7 +9,7 @@ const Nav = styled.nav`
   top: 0;
   position: fixed;
   background: ${props => props.bg};
-  z-index: 2;
+  z-index: 100;
 `;
 
 const Content = styled.div`
@@ -23,7 +23,7 @@ const Brand = styled.h1`
   align-items: center;
   color: ${props => props.fg};
   margin: 0 0 0 5%;
-  z-index: 3;
+  z-index: 101;
   a {
     color: ${props => props.fg};
     text-decoration: none;
@@ -84,7 +84,7 @@ const Hamburger = styled.div`
     right: 5%;
     top: 50%;
     transform: translate(-5%, -50%);
-    z-index: 3;
+    z-index: 101;
   }
 `;
 
