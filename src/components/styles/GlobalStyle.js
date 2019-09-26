@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    /* padding-top: 10vh; */
+    padding-top: 90px;
     background: inherit;
   }
 `;

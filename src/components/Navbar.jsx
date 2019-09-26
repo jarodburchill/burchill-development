@@ -5,7 +5,7 @@ const mediaMaxWidth = 1000;
 
 const Nav = styled.nav`
   width: 100vw;
-  height: 10vh;
+  height: 90px;
   top: 0;
   position: fixed;
   background: ${props => props.bg};
