@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/burchill-development/static/js/main.a60d4f2e.chunk.js",
-    "main.js.map": "/burchill-development/static/js/main.a60d4f2e.chunk.js.map",
+    "main.js": "/burchill-development/static/js/main.34ef47f4.chunk.js",
+    "main.js.map": "/burchill-development/static/js/main.34ef47f4.chunk.js.map",
     "runtime-main.js": "/burchill-development/static/js/runtime-main.50ac5534.js",
     "runtime-main.js.map": "/burchill-development/static/js/runtime-main.50ac5534.js.map",
-    "static/js/2.26edde92.chunk.js": "/burchill-development/static/js/2.26edde92.chunk.js",
-    "static/js/2.26edde92.chunk.js.map": "/burchill-development/static/js/2.26edde92.chunk.js.map",
+    "static/js/2.1efb9dc4.chunk.js": "/burchill-development/static/js/2.1efb9dc4.chunk.js",
+    "static/js/2.1efb9dc4.chunk.js.map": "/burchill-development/static/js/2.1efb9dc4.chunk.js.map",
     "index.html": "/burchill-development/index.html",
-    "precache-manifest.b8192e14aaf582cf625da6a62ab9f58c.js": "/burchill-development/precache-manifest.b8192e14aaf582cf625da6a62ab9f58c.js",
+    "precache-manifest.6fe676fe572a97168d4453c5e52c1872.js": "/burchill-development/precache-manifest.6fe676fe572a97168d4453c5e52c1872.js",
     "service-worker.js": "/burchill-development/service-worker.js",
     "static/media/background2.jpg": "/burchill-development/static/media/background2.771d63e6.jpg"
   }
