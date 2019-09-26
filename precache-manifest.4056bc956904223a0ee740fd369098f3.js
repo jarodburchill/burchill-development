@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d8c052a3fc7108b31739b7a8d87cb31",
+    "revision": "df4fd93c3b76a65fb12e80d6d7308e12",
     "url": "/burchill-development/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/burchill-development/static/js/2.1efb9dc4.chunk.js"
   },
   {
-    "revision": "b019789b26f49a8572d1",
-    "url": "/burchill-development/static/js/main.34ef47f4.chunk.js"
+    "revision": "9370ff0f82dbc588b8a4",
+    "url": "/burchill-development/static/js/main.ffcb5b35.chunk.js"
   },
   {
     "revision": "7847d731235d6878e3c0",
