@@ -54,7 +54,7 @@ const HamburgerLinks = styled(Links)`
     background: ${props => props.bg};
     height: 100vh;
     width: 100vw;
-    margin: 5% 0;
+    padding: 5% 0;
     transition: all 0.75s ease-out;
     clip-path: ${props =>
       props.open ? "circle(200% at 95% -10%)" : "circle(100px at 95% -10%)"};
