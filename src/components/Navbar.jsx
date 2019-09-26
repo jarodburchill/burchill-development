@@ -137,7 +137,7 @@ const Navbar = ({ children, bg, fg }) => {
         <Content>
           {children
             .filter(child => {
-              return child.props.title;
+              return child.props.brand;
             })
             .map((child, index) => {
               return (
@@ -149,7 +149,7 @@ const Navbar = ({ children, bg, fg }) => {
           <HamburgerLinks fg={fg} bg={bg} open={open}>
             {children
               .filter(child => {
-                return !child.props.title;
+                return !child.props.brand;
               })
               .map((child, index) => {
                 return (
@@ -168,7 +168,7 @@ const Navbar = ({ children, bg, fg }) => {
         <Content>
           {children
             .filter(child => {
-              return child.props.title;
+              return child.props.brand;
             })
             .map((child, index) => {
               return (
@@ -180,7 +180,7 @@ const Navbar = ({ children, bg, fg }) => {
           <Links fg={fg}>
             {children
               .filter(child => {
-                return !child.props.title;
+                return !child.props.brand;
               })
               .map((child, index) => {
                 return <li key={index}>{child}</li>;

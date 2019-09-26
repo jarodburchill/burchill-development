@@ -18,7 +18,7 @@ const App = () => {
       <>
         <Router>
           <Navbar bg={theme.primary} fg={theme.secondary}>
-            <Link to="/" title>
+            <Link to="/" brand="true">
               Burchill Development
             </Link>
             <Link to="/">Home</Link>
