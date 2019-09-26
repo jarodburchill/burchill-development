@@ -104,11 +104,11 @@ const Navbar = ({ children, bg, fg }) => {
     window.navigator.userAgent.indexOf("MSIE") < 0 &&
     window.navigator.userAgent.indexOf("Trident") < 0
   ) {
-    const handleClick = () => {
+    const handleClick = (brandClick = false) => {
       if (window.innerWidth <= mediaMaxWidth) {
         if (open) {
           setOpen(false);
-        } else {
+        } else if (!brandClick) {
           setOpen(true);
         }
       }
@@ -141,7 +141,7 @@ const Navbar = ({ children, bg, fg }) => {
             })
             .map((child, index) => {
               return (
-                <Brand key={index} fg={fg} onClick={() => handleClick()}>
+                <Brand key={index} fg={fg} onClick={() => handleClick(true)}>
                   {child}
                 </Brand>
               );
