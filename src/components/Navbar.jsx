@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+const mediaMaxWidth = 1000;
+
 const Nav = styled.nav`
   width: 100vw;
   height: 10vh;
@@ -22,7 +24,7 @@ const Title = styled.h1`
   color: ${props => props.fg};
   margin-left: 5%;
   z-index: 3;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: ${mediaMaxWidth}px) {
     font-size: 20px;
   }
 `;
@@ -47,7 +49,7 @@ const Links = styled.ul`
 `;
 
 const HamburgerLinks = styled(Links)`
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: ${mediaMaxWidth}px) {
     position: fixed;
     flex-direction: column;
     justify-content: space-evenly;
@@ -72,7 +74,7 @@ const HamburgerLinks = styled(Links)`
 `;
 
 const Hamburger = styled.div`
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: ${mediaMaxWidth}px) {
     position: absolute;
     cursor: pointer;
     right: 5%;
@@ -83,7 +85,7 @@ const Hamburger = styled.div`
 `;
 
 const Line = styled.div`
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: ${mediaMaxWidth}px) {
     width: 30px;
     height: 3px;
     margin: 5px 0;
@@ -99,14 +101,16 @@ const Navbar = ({ children, title, bg, fg }) => {
     window.navigator.userAgent.indexOf("Trident") < 0
   ) {
     const handleClick = () => {
-      if (open) {
-        setOpen(false);
-      } else {
-        setOpen(true);
+      if (window.innerWidth <= mediaMaxWidth) {
+        if (open) {
+          setOpen(false);
+        } else {
+          setOpen(true);
+        }
       }
     };
     window.addEventListener("resize", e => {
-      if (e.target.outerWidth > 1000) {
+      if (e.target.innerWidth > mediaMaxWidth) {
         setOpen(false);
       }
     });

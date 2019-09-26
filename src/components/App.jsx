@@ -1,103 +1,38 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
 import Navbar from "./Navbar";
+import Home from "./Home";
+import Projects from "./Projects";
+import Blog from "./Blog";
 
 const theme = {
   primary: "rgb(0, 0, 0)",
   secondary: "rgb(255, 255, 255)"
 };
 
-const Container = styled.div`
-  margin: 10vh 1% 0 1%;
-  padding: 10%;
-  border-radius: 10px;
-  width: 98%;
-  min-height: 50vh;
-  position: relative;
-  background: inherit;
-  overflow: hidden;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: inherit;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.75);
-    filter: blur(10px);
-    margin: -20px;
-    z-index: -1;
-  }
-`;
-
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Navbar
-          title="Burchill Development"
-          bg={theme.primary}
-          fg={theme.secondary}
-        >
-          <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#blog">Blog</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </Navbar>
+        <Router>
+          <Navbar
+            title="Burchill Development"
+            bg={theme.primary}
+            fg={theme.secondary}
+          >
+            <Link to="/">Home</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </Navbar>
+          <Route path="/" exact component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/blog" component={Blog} />
+        </Router>
         <GlobalStyle />
-        <Container>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
-          consequatur soluta modi voluptates sed hic optio itaque sunt nisi
-          reprehenderit tenetur doloremque ratione quasi ducimus officia, illo
-          architecto accusamus eaque? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quod obcaecati animi qui praesentium fugiat soluta
-          temporibus impedit magni, incidunt laudantium nesciunt, aliquam
-          quisquam. Eos harum aliquid, qui facilis assumenda error? Lorem ipsum
-          dolor sit, amet consectetur adipisicing elit. Asperiores consequatur
-          soluta modi voluptates sed hic optio itaque sunt nisi reprehenderit
-          tenetur doloremque ratione quasi ducimus officia, illo architecto
-          accusamus eaque? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Quod obcaecati animi qui praesentium fugiat soluta temporibus
-          impedit magni, incidunt laudantium nesciunt, aliquam quisquam. Eos
-          harum aliquid, qui facilis assumenda error?
-        </Container>
-        <Container>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
-          consequatur soluta modi voluptates sed hic optio itaque sunt nisi
-          reprehenderit tenetur doloremque ratione quasi ducimus officia, illo
-          architecto accusamus eaque? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quod obcaecati animi qui praesentium fugiat soluta
-          temporibus impedit magni, incidunt laudantium nesciunt, aliquam
-          quisquam. Eos harum aliquid, qui facilis assumenda error? Lorem ipsum
-          dolor sit, amet consectetur adipisicing elit. Asperiores consequatur
-          soluta modi voluptates sed hic optio itaque sunt nisi reprehenderit
-          tenetur doloremque ratione quasi ducimus officia, illo architecto
-          accusamus eaque? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Quod obcaecati animi qui praesentium fugiat soluta temporibus
-          impedit magni, incidunt laudantium nesciunt, aliquam quisquam. Eos
-          harum aliquid, qui facilis assumenda error?
-        </Container>
-        <Container>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
-          consequatur soluta modi voluptates sed hic optio itaque sunt nisi
-          reprehenderit tenetur doloremque ratione quasi ducimus officia, illo
-          architecto accusamus eaque? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quod obcaecati animi qui praesentium fugiat soluta
-          temporibus impedit magni, incidunt laudantium nesciunt, aliquam
-          quisquam. Eos harum aliquid, qui facilis assumenda error? Lorem ipsum
-          dolor sit, amet consectetur adipisicing elit. Asperiores consequatur
-          soluta modi voluptates sed hic optio itaque sunt nisi reprehenderit
-          tenetur doloremque ratione quasi ducimus officia, illo architecto
-          accusamus eaque? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Quod obcaecati animi qui praesentium fugiat soluta temporibus
-          impedit magni, incidunt laudantium nesciunt, aliquam quisquam. Eos
-          harum aliquid, qui facilis assumenda error?
-        </Container>
       </>
     </ThemeProvider>
   );
