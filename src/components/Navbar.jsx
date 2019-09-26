@@ -24,6 +24,10 @@ const Title = styled.h1`
   color: ${props => props.fg};
   margin-left: 5%;
   z-index: 3;
+  a {
+    color: ${props => props.fg};
+    text-decoration: none;
+  }
   @media screen and (max-width: ${mediaMaxWidth}px) {
     font-size: 20px;
   }
@@ -93,7 +97,7 @@ const Line = styled.div`
   }
 `;
 
-const Navbar = ({ children, title, bg, fg }) => {
+const Navbar = ({ children, bg, fg }) => {
   const [open, setOpen] = useState(false);
   if (
     window.navigator.userAgent.indexOf("Edge") < 0 &&
@@ -131,15 +135,29 @@ const Navbar = ({ children, title, bg, fg }) => {
           <Line fg={fg} />
         </Hamburger>
         <Content>
-          <Title fg={fg}>{title}</Title>
-          <HamburgerLinks fg={fg} bg={bg} open={open}>
-            {children.map((link, index) => {
+          {children
+            .filter(child => {
+              return child.props.title;
+            })
+            .map((child, index) => {
               return (
-                <li key={index} onClick={() => handleClick()}>
-                  {link}
-                </li>
+                <Title key={index} fg={fg} onClick={() => handleClick()}>
+                  {child}
+                </Title>
               );
             })}
+          <HamburgerLinks fg={fg} bg={bg} open={open}>
+            {children
+              .filter(child => {
+                return !child.props.title;
+              })
+              .map((child, index) => {
+                return (
+                  <li key={index} onClick={() => handleClick()}>
+                    {child}
+                  </li>
+                );
+              })}
           </HamburgerLinks>
         </Content>
       </Nav>
@@ -148,11 +166,25 @@ const Navbar = ({ children, title, bg, fg }) => {
     return (
       <Nav bg={bg}>
         <Content>
-          <Title fg={fg}>{title}</Title>
-          <Links fg={fg}>
-            {children.map((link, index) => {
-              return <li key={index}>{link}</li>;
+          {children
+            .filter(child => {
+              return child.props.title;
+            })
+            .map((child, index) => {
+              return (
+                <Title key={index} fg={fg}>
+                  {child}
+                </Title>
+              );
             })}
+          <Links fg={fg}>
+            {children
+              .filter(child => {
+                return !child.props.title;
+              })
+              .map((child, index) => {
+                return <li key={index}>{child}</li>;
+              })}
           </Links>
         </Content>
       </Nav>

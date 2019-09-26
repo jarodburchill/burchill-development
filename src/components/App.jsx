@@ -17,11 +17,10 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <Router>
-          <Navbar
-            title="Burchill Development"
-            bg={theme.primary}
-            fg={theme.secondary}
-          >
+          <Navbar bg={theme.primary} fg={theme.secondary}>
+            <Link to="/" title>
+              Burchill Development
+            </Link>
             <Link to="/">Home</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/blog">Blog</Link>
