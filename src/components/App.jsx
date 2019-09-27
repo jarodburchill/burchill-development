@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle";
-import Navbar from "./Navbar";
+import Navbar from "react-pop-ui";
 import Home from "./Home";
 import Projects from "./Projects";
 import Blog from "./Blog";
