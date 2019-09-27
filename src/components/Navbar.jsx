@@ -44,11 +44,15 @@ const Links = styled.ul`
   margin: 0 5% 0 0;
   li {
     margin: 0 2.5%;
-  }
-  li a {
-    color: ${props => props.fg};
-    text-decoration: none;
-    font-size: 15px;
+    a {
+      color: ${props => props.fg};
+      text-decoration: none;
+      font-size: 15px;
+      &:hover {
+        color: ${props => props.hover};
+        text-decoration: none;
+      }
+    }
   }
 `;
 
@@ -97,7 +101,7 @@ const Line = styled.div`
   }
 `;
 
-const Navbar = ({ children, bg, fg }) => {
+const Navbar = ({ children, bg, fg, hover }) => {
   const [open, setOpen] = useState(false);
   if (
     window.navigator.userAgent.indexOf("Edge") < 0 &&
@@ -146,7 +150,7 @@ const Navbar = ({ children, bg, fg }) => {
                 </Brand>
               );
             })}
-          <HamburgerLinks fg={fg} bg={bg} open={open}>
+          <HamburgerLinks fg={fg} bg={bg} hover={hover} open={open}>
             {children
               .filter(child => {
                 return !child.props.brand;
@@ -177,7 +181,7 @@ const Navbar = ({ children, bg, fg }) => {
                 </Brand>
               );
             })}
-          <Links fg={fg}>
+          <Links fg={fg} hover={hover}>
             {children
               .filter(child => {
                 return !child.props.brand;

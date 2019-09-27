@@ -17,7 +17,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <Router>
-          <Navbar bg={theme.primary} fg={theme.secondary}>
+          <Navbar bg={theme.primary} fg={theme.secondary} hover={"red"}>
             <Link to="/" brand="true">
               Burchill Development
             </Link>
